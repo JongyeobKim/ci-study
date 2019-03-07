@@ -14,7 +14,7 @@ RUN mkdir -p build/dependency && (cd build/dependency; jar -xf ../libs/*.jar)
 
 FROM openjdk:8-jdk-alpine
 VOLUME /tmp
-VOLUME /var/run/docker.sock:/var/run/docker.sock
+#VOLUME /var/run/docker.sock:/var/run/docker.sock
 ARG DEPENDENCY=/workspace/app/build/dependency
 COPY --from=build ${DEPENDENCY}/BOOT-INF/lib /app/lib
 COPY --from=build ${DEPENDENCY}/META-INF /app/META-INF

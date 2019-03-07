@@ -3,17 +3,11 @@ pipeline {
         registry = "kittenplanet/admin_age"
     }
     agent any
+
     stages {
-        stages {
-            stage('Test') {
-                steps {
-                    sh './gradlew check'
-                }
-            }
-        }
-        post {
-            always {
-                junit 'build/reports/**/*.xml'
+        stage('Test') {
+            steps {
+                sh './gradlew check'
             }
         }
 
@@ -23,6 +17,12 @@ pipeline {
                     docker.build registry + ":$BUILD_NUMBER"
                 }
             }
+        }
+    }
+
+    post {
+        always {
+            junit 'build/reports/**/*.xml'
         }
     }
 }

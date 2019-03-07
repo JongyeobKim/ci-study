@@ -1,6 +1,6 @@
 pipeline {
     environment {
-        registry = "kittenplanet/admin_age"
+        registry = "kittenplanet/admin_page"
     }
     agent any
 

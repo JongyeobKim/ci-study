@@ -9,6 +9,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class CiStudyApplication {
 
+    @GetMapping("good")
+    public String good() {
+        return "so Good";
+    }
+
     @GetMapping("/helloci")
     public String hello() {
         return "Hello CI";

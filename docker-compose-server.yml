@@ -2,7 +2,7 @@ version: '3'
 services:
 
   app:
-      image: kittenplanet/admin_page
+      image: kittenplanet/kp_admin
       container_name: kp_app
       restart: always
       # working_dir: ~/Desktop/docker-test/admin_server/app
@@ -14,8 +14,8 @@ services:
         - "8080"
 
   nginx:
-    container_name: kp_nginx
     image: nginx:1.14
+    container_name: kp_nginx
     restart: always
     ports:
       - 80:80

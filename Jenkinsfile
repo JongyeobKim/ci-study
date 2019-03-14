@@ -22,6 +22,7 @@ pipeline {
         stage('Remote Run') {
             steps {
                 sh 'DOCKER_HOST=tcp://192.168.0.45:2375 docker-compose -f docker-compose-server.yml down'
+                sh 'DOCKER_HOST=tcp://192.168.0.45:2375 docker-compose -f docker-compose-server.yml up -d'
             }
         }
     }

@@ -67,3 +67,33 @@
 > **5)** Origin/feature-profile 브랜치로부터 Upstream/develop에 `pull request(풀리퀘스트)`를 합니다.
 >
 > - `pull request`란 변경한 작업을 중앙 저장소의 특정 브랜치(일반적으론 Upstream/develop)에 merge 요청을 하는 것입니다. pull request를 통해 다른 개발자에게 코드 리뷰를 요청할 수 있습니다. 당장 merge 해야 하는 것이 아니기 때문에, 협업하는 개발자들과 의견을 공유하며 더 나은 수준의 코드를 짜기 위해 노력해야 합니다. 
+
+
+
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+11
+
+
+>
+> - `rebase(리베이스)`는 브랜치의 뿌리를 다시 설정하는 명령입니다. Upstream/develop 브랜치의 최신 상태를 pull(풀) 하여 받아오면, Local/develop에 Upstream/develop으로부터 분기된 새로운 히스토리가 생성됩니다. Local/develop에 새롭게 생성된 commit HEAD가 Upstream/develop 브랜치의 commit HEAD를 가리키도록(동기화)  뿌리를 재설정해 주어야 하는데, 이때 사용하는 것이 rebase 입니다.
+>
+>   ```shell
+>   명령어 : git pull --rebase [remote 저장소 이름] [branch 이름]
+>   ```
+>
+> **2)** Local/develop 브랜치로부터 feature-profile 브랜치를 생성합니다. 생성과 동시에 feature-profile 브랜치로 체크아웃을 합니다.
+>
+>   ```shell
+>   명령어 : git checkout -b [branch 이름]
+>   ```
+>

@@ -28,3 +28,5 @@
 > - `pull request`란 변경한 작업을 중앙 저장소의 특정 브랜치(일반적으론 Upstream/develop)에 merge 요청을 하는 것입니다. pull request를 통해 다른 개발자에게 코드 리뷰를 요청할 수 있습니다. 당장 merge 해야 하는 것이 아니기 때문에, 협업하는 개발자들과 의견을 공유하며 더 나은 수준의 코드를 짜기 위해 노력해야 합니다. 
 
 <br />
+
+<span style="color:red">Red Text</span>
